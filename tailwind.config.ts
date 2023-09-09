@@ -6,7 +6,11 @@ import colors from "tailwindcss/colors";
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        JetBrains: ['JetBrains Mono', 'monospace'],
+      },
+    },
     colors: {
       'dark': '#2E3141',
       'primary': '#E1885E',
