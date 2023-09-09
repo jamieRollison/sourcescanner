@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="bg-teal-500 bg-secondary flex flex-wrap items-center justify-between p-6">
+    <nav className="bg-teal-500 flex flex-wrap items-center justify-between bg-secondary p-6">
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
         <Image
           src="/ss_logo.png"
@@ -27,9 +27,15 @@ export default function Navbar() {
         <div className="text-sm lg:flex-grow">
           <a
             href="#about"
-            className="font-mono mt-4 block text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
+            className="mt-4 block font-mono text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
           >
             About
+          </a>
+          <a
+            href="#edit"
+            className="mt-4 block font-mono text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
+          >
+            Edit
           </a>
         </div>
         <div className="space-x-2">
