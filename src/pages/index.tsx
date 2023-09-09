@@ -42,7 +42,7 @@ export default function Home() {
           <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
             <div className="text-sm lg:flex-grow">
               <a
-                href="#responsive-header"
+                href="#about"
                 className="font-JetBrains mt-4 block text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
               >
                 About
