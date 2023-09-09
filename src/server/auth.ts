@@ -1,6 +1,5 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { type GetServerSidePropsContext } from "next";
-import { PrismaClient } from "@prisma/client";
 import {
   getServerSession,
   type DefaultSession,
@@ -8,9 +7,8 @@ import {
 } from "next-auth";
 
 import { env } from "~/env.mjs";
+import { prisma } from "~/server/db";
 import GoogleProvider from "next-auth/providers/google";
-
-const prisma = new PrismaClient();
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`

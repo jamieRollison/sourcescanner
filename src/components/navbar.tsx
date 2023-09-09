@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Navbar() {
@@ -7,12 +8,14 @@ export default function Navbar() {
   return (
     <nav className="bg-secondary flex flex-wrap items-center justify-between bg-teal-500 p-6">
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
-        <Image
-          src="/ss_logo.png"
-          width="120"
-          height="80"
-          alt="Source Scanner Logo"
-        ></Image>
+        <Link href="/">
+          <Image
+            src="/ss_logo.png"
+            width="120"
+            height="80"
+            alt="Source Scanner Logo"
+          ></Image>
+        </Link>
       </div>
       <div className="block lg:hidden">
         <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
@@ -43,7 +46,9 @@ export default function Navbar() {
         </div>
         <div className="space-x-2">
           <button
-            onClick={session ? () => void signOut() : () => void signIn()}
+            onClick={
+              session ? () => void signOut() : () => void signIn("google")
+            }
             className="hover:border-primary hover:bg-primary mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:text-white lg:mt-0"
           >
             {session ? "Sign out" : "Sign in"}
