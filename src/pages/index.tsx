@@ -1,4 +1,3 @@
-import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
