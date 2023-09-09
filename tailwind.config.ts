@@ -19,6 +19,7 @@ export default {
       white: "#FFFFFF",
       black: "#1E1E1E",
       sky: colors.sky,
+      transparent: colors.transparent,
     },
   },
   plugins: [],

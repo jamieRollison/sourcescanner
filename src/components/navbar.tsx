@@ -24,15 +24,15 @@ export default function Navbar() {
         </button>
       </div>
       <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
-        <div className="text-sm lg:flex-grow">
+        <div className="text-sm lg:flex-grow sm:space-x-0 lg:space-x-4">
           <a
-            href="#about"
+            href="about"
             className="mt-4 block font-mono text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
           >
             About
           </a>
           <a
-            href="#edit"
+            href="edit"
             className="mt-4 block font-mono text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
           >
             Edit
