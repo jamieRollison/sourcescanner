@@ -1,7 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
+import { Tooltip, Button } from 'flowbite-react'
 
 
 
@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col  bg-dark">
-        <nav className="bg-teal-500 bg-secondary flex flex-wrap items-center justify-between p-6">
+        <nav className=" bg-secondary flex flex-wrap items-center justify-between p-6">
           <div className="mr-6 flex flex-shrink-0 items-center text-white">
             <Image
               src="/ss_logo.png"
@@ -64,8 +64,24 @@ export default function Home() {
             </div>
           </div>
         </nav>
+       <section className="flex flex-col flex-1 px-20">
+        <h1 className="text-6xl font-bold text-white mt-20 text-center">
+          scan your text,<br /> <span className="text-primary underline decoration-dashed">understand</span> the words.
+        </h1>
+        <div className="flex gap-6">
+          <div className="bg-secondary w-1/2 mt-10 rounded-md border-2 border-white">
+            <p className="p-4 text-white">
+              A hackathon is a great way to learn about ways you can manipulate code and software in unique and interesting ways.</p>
+          </div>
+          <div className="bg-[#f5f5f5] w-1/2 mt-10 rounded-md">
+            <p className="p-4 text-dark gap-2 inline-flex break-all">A <Tooltip content="pst"><p className="text-primary transition duration-150 ease-in hover:text-primary focus:text-primary active:text-primary_dark underline decoration-dashed"> hackathon </p></Tooltip> is a great way to learn about ways you can manipulate code and software in unique and interesting ways.</p>
+          </div>
+        </div>
 
-        <footer className="bg-teal-500 bg-secondary fixed bottom-0 left-0 flex w-full flex-wrap items-center justify-between p-6">
+
+        </section>
+
+        <footer className=" bg-secondary fixed bottom-0 left-0 flex w-full flex-wrap items-center justify-between p-6">
           <div>Hello World!</div>
           <div>Hello Other World!</div>
         </footer>

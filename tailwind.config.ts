@@ -4,7 +4,7 @@ import colors from "tailwindcss/colors";
 
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./node_modules/flowbite-react/**/*.js", "./pages/**/*.{ts,tsx}", "./public/**/*.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -22,5 +22,5 @@ export default {
       'sky': colors.sky,
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 } satisfies Config;
