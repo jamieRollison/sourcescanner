@@ -38,25 +38,13 @@ export default function Home() {
               A{" "}
               <Source
                 word="hackathon"
-                info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus placerat feugiat. Vivamus eros tortor, sagittis a semper in, blandit a magna. Suspendisse mollis, nulla et aliquam dictum, urna eros gravida magna, eget molestie nunc quam sed augue. Nullam at libero tempor, tincidunt augue ultrices, laoreet risus. Morbi eu orci urna. Curabitur viverra efficitur libero, vel ornare ligula placerat nec. Phasellus rutrum tincidunt pretium. Donec turpis metus, bibendum eu elit vel, malesuada euismod dui. Suspendisse eu risus in ex posuere egestas a id tellus. Nulla imperdiet nec nibh sed maximus. Proin imperdiet nulla in libero mollis varius. Pellentesque eget ex fringilla leo egestas porta sed ullamcorper ante. Suspendisse imperdiet eget metus vel scelerisque. Pellentesque tellus ante, dictum eu tempus sed, tempor et purus. Morbi id ligula eu diam faucibus ultrices sit amet at urna."
+                info="A hackathon is a great way to learn about ways you can
+                manipulate code and software in unique and interesting ways."
                 pageTitle="Hackathon Criticism"
                 url="https://en.wikipedia.org/wiki/Hackathon#Criticism"
               />{" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              dapibus placerat feugiat. Vivamus eros tortor, sagittis a semper
-              in, blandit a magna. Suspendisse mollis, nulla et aliquam dictum,
-              urna eros gravida magna, eget molestie nunc quam sed augue. Nullam
-              at libero tempor, tincidunt augue ultrices, laoreet risus. Morbi
-              eu orci urna. Curabitur viverra efficitur libero, vel ornare
-              ligula placerat nec. Phasellus rutrum tincidunt pretium. Donec
-              turpis metus, bibendum eu elit vel, malesuada euismod dui.
-              Suspendisse eu risus in ex posuere egestas a id tellus. Nulla
-              imperdiet nec nibh sed maximus. Proin imperdiet nulla in libero
-              mollis varius. Pellentesque eget ex fringilla leo egestas porta
-              sed ullamcorper ante. Suspendisse imperdiet eget metus vel
-              scelerisque. Pellentesque tellus ante, dictum eu tempus sed,
-              tempor et purus. Morbi id ligula eu diam faucibus ultrices sit
-              amet at urn
+              is a great way to learn about ways you can manipulate code and
+              software in unique and interesting ways.
             </div>
           </div>
         </section>
