@@ -50,14 +50,8 @@ export default function Home() {
                 }
                 className="hover:border-primary hover:bg-primary mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:text-white lg:mt-0"
               >
-                Login
+                {sessionData ? `Log out` : "Sign in"}
               </button>
-              <a
-                href="#"
-                className="hover:border-primary hover:bg-primary mt-4 inline-block rounded border border-white px-4 py-2 text-sm  leading-none text-white hover:text-white lg:mt-0"
-              >
-                Sign Up
-              </a>
             </div>
           </div>
         </nav>
