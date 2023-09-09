@@ -1,8 +1,51 @@
 import Head from "next/head";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
+import { parseGPTResponse } from "~/utils/parse-helpers";
 
 export default function Home() {
+  const example = `Here is a list of objects in JavaScript following the schema {"name": string, "definition": string}, where "name" represents words or concepts that may need to be defined, and "definition" is the definition of the first entry:
+
+\`\`\`javascript
+[
+  {"name": "Becquerel", "definition": "A character who prototypes Jade's sprite with himself, leading to significant consequences in the story."},
+  {"name": "Jack Noir ('Bec Noir')", "definition": "A demon character who becomes fully-prototyped with Becquerel and gains teleportation abilities, causing chaos in the session."},
+  {"name": "trolls", "definition": "A group of characters who initially antagonize the kids but later cooperate with them in the session."},
+  {"name": "Kanaya", "definition": "One of the trolls who engages in conversation with Rose and learns about each other's species."},
+  {"name": "Rose", "definition": "One of the kids who talks to Kanaya to learn more about troll species."},
+  {"name": "Terezi", "definition": "A troll who takes an interest in Dave and helps him with his quest, which involves time travel."},
+  {"name": "Dave", "definition": "One of the kids who receives assistance from Terezi for his quest."},
+  {"name": "Vriska", "definition": "A troll who manipulates the humans and plays a role in Jade's storyline."},
+  {"name": "John", "definition": "One of the kids who is guided by Vriska to his Quest Bed and ascends to god tier."},
+  {"name": "Jade", "definition": "A key character who experiences challenges and changes in the story, including her interactions with Karkat."},
+  {"name": "Karkat", "definition": "A character who initially has conflicts with Jade but later gains her cooperation."},
+  {"name": "Becsprite", "definition": "A character created when Jade prototypes her dream self with her own dead dream self."},
+  {"name": "dream bubbles", "definition": "Places made of memories where dead and living players go while sleeping when their dream selves are dead."},
+  {"name": "Aradia", "definition": "A character who becomes god tier and serves as a steward of the afterlife."},
+  {"name": "Fourth Wall", "definition": "A mysterious window stored in Jade's grandfather's laboratory."},
+  {"name": "space player", "definition": "Jade's role in the session, involving stoking the Forge and breeding frogs for creating the Genesis Frog."},
+  {"name": "Genesis Frog", "definition": "The frog that will become the new universe created by the kids."}
+]
+\`\`\`
+
+This list includes objects with "name" and "definition" attributes, where "name" corresponds to words or concepts from the paragraph, and "definition" provides their definitions as per the context of the text. Common or semantically neutral words have been excluded.`;
+
+  console.log(
+    parseGPTResponse({
+      created: 1677664795,
+      id: "chatcmpl-7QyqpwdfhqwajicIEznoc6Q47XAyW",
+      object: "chat.completion",
+      model: "gpt-3.5-turbo-0613",
+      choices: [
+        {
+          message: { role: "assistant", content: example },
+          finish_reason: "stop",
+          index: 0,
+        },
+      ],
+    }),
+  );
+
   return (
     <>
       <Head>
