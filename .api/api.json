@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "metaphorapi",
+      "source": "@metaphorapi/v1.0#1fg9zd1pll1b6le6",
+      "integrity": "sha512-T1M70JEjWPWkQbr3itx7EBLXKYKR4NQxvzDKE/9jn7ertaegMIP/UhCDHC8UxPXuf3VvsL5Lnbd19/ESm3ONTg==",
+      "installerVersion": "6.1.1"
+    }
+  ]
+}

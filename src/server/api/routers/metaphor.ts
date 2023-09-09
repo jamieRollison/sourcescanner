@@ -3,12 +3,10 @@ import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 
 import { env } from "~/env.mjs";
-import api from "api";
+import sdk from "@api/metaphorapi";
 
 export const metaphorRouter = createTRPCRouter({
   search: publicProcedure.input(z.string()).query(async ({ input }) => {
-    const sdk = api("@metaphorapi/v1.0#1fg9zd1pll1b6le6");
-
     sdk.auth(env.METAPHOR_SECRET);
     return sdk
       .search({
@@ -17,7 +15,7 @@ export const metaphorRouter = createTRPCRouter({
         useAutoprompt: true,
         type: "neural",
       })
-      .then((res: any) => {
+      .then((res) => {
         return res.data;
       })
       .catch((err: Error) => {
