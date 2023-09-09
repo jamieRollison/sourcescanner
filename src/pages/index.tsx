@@ -3,6 +3,7 @@ import Head from "next/head";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
 import Image from "next/image";
+import { Button } from "flowbite-react";
 
 import Source from "~/components/source";
 
@@ -18,17 +19,17 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col  bg-dark">
         <Navbar />
-        <section className="flex flex-1 flex-col px-20">
+        <section className="flex flex-1 flex-col ">
           <h1 className="mt-20 text-center text-6xl font-bold text-white">
-            scan your text,
+            Scan your text,
             <br />{" "}
             <span className="text-primary underline decoration-dashed">
               understand
             </span>{" "}
             the words.
           </h1>
-          <div className="flex gap-6">
-            <div className="mt-10 w-1/2 rounded-md border-2 border-white bg-secondary">
+          <div className="mx-10 flex gap-6 lg:mx-60 xl:mx-80">
+            <div className="mt-10 w-1/2 rounded-md border-2 border-white bg-secondary ">
               <p className="p-4 text-white">
                 A hackathon is a great way to learn about ways you can
                 manipulate code and software in unique and interesting ways.
@@ -42,24 +43,31 @@ export default function Home() {
                 pageTitle="Hackathon Criticism"
                 url="https://en.wikipedia.org/wiki/Hackathon#Criticism"
               />{" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-              dapibus placerat feugiat. Vivamus eros tortor, sagittis a semper
-              in, blandit a magna. Suspendisse mollis, nulla et aliquam dictum,
-              urna eros gravida magna, eget molestie nunc quam sed augue. Nullam
-              at libero tempor, tincidunt augue ultrices, laoreet risus. Morbi
-              eu orci urna. Curabitur viverra efficitur libero, vel ornare
-              ligula placerat nec. Phasellus rutrum tincidunt pretium. Donec
-              turpis metus, bibendum eu elit vel, malesuada euismod dui.
-              Suspendisse eu risus in ex posuere egestas a id tellus. Nulla
-              imperdiet nec nibh sed maximus. Proin imperdiet nulla in libero
-              mollis varius. Pellentesque eget ex fringilla leo egestas porta
-              sed ullamcorper ante. Suspendisse imperdiet eget metus vel
-              scelerisque. Pellentesque tellus ante, dictum eu tempus sed,
-              tempor et purus. Morbi id ligula eu diam faucibus ultrices sit
-              amet at urn
+              is a great way to learn about ways you can manipulate code and
+              software in unique and interesting ways.
+            </div>
+          </div>
+          <div className="mt-10 flex bg-primary_dark py-20 text-center font-semibold text-white">
+            <div className="flex w-1/2 flex-col items-center">
+              <p className="text-3xl mx-10">
+                We are students too, and we know how hard it can be to 
+                fully<br/> understand academic papers and reading materials 📚📝
+              </p>
+              <button className="mt-10 w-40 rounded-md border-2 border-white bg-transparent p-4 hover:bg-primary">
+                Try it Now
+              </button>
+            </div>
+            <div className="w-1/2 flex flex-col gap-10">
+              <div className="bg-[#f5f5f5] mx-10 rounded-md p-4 font-semibold border-4 border-primary">
+                <p className="text-black h-20">Wikipedia Lens</p>
+              </div>
+              <div className="bg-[#f5f5f5] mx-10 rounded-md p-4 font-semibold border-4 border-primary">
+                <p className="text-black h-20">Technical Lens</p>
+              </div>
             </div>
           </div>
         </section>
+
         <Footer />
       </main>
     </>
