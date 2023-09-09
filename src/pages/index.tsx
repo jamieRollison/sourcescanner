@@ -3,9 +3,8 @@ import Head from "next/head";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
 import Image from "next/image";
-import { Tooltip, Button } from 'flowbite-react'
 
-
+import Source from "~/components/source";
 
 import { api } from "~/utils/api";
 
@@ -19,27 +18,49 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col  bg-dark">
         <Navbar />
-        <section className="flex flex-col flex-1 px-20">
-          <h1 className="text-6xl font-bold text-white mt-20 text-center">
-            scan your text,<br /> <span className="text-primary underline decoration-dashed">understand</span> the words.
+        <section className="flex flex-1 flex-col px-20">
+          <h1 className="mt-20 text-center text-6xl font-bold text-white">
+            scan your text,
+            <br />{" "}
+            <span className="text-primary underline decoration-dashed">
+              understand
+            </span>{" "}
+            the words.
           </h1>
           <div className="flex gap-6">
-            <div className="bg-secondary w-1/2 mt-10 rounded-md border-2 border-white">
+            <div className="mt-10 w-1/2 rounded-md border-2 border-white bg-secondary">
               <p className="p-4 text-white">
-                A hackathon is a great way to learn about ways you can manipulate code and software in unique and interesting ways.</p>
+                A hackathon is a great way to learn about ways you can
+                manipulate code and software in unique and interesting ways.
+              </p>
             </div>
-            <div className="bg-[#f5f5f5] w-1/2 mt-10 rounded-md">
-              <div className="p-4 text-dark gap-2 inline-block">
-                A 
-                <Tooltip content="pst">
-                  <span className="text-primary transition duration-150 ease-in hover:text-primary focus:text-primary active:text-primary_dark underline decoration-dashed"> hackathon </span>
-                </Tooltip> 
-                is a great way to learn about ways you can manipulate code and software in unique and interesting ways.
-              </div>
+            <div className="mt-10 inline-block w-1/2 rounded-md bg-[#f5f5f5] p-4">
+              A{" "}
+              <Source
+                word="hackathon"
+                info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus placerat feugiat. Vivamus eros tortor, sagittis a semper in, blandit a magna. Suspendisse mollis, nulla et aliquam dictum, urna eros gravida magna, eget molestie nunc quam sed augue. Nullam at libero tempor, tincidunt augue ultrices, laoreet risus. Morbi eu orci urna. Curabitur viverra efficitur libero, vel ornare ligula placerat nec. Phasellus rutrum tincidunt pretium. Donec turpis metus, bibendum eu elit vel, malesuada euismod dui. Suspendisse eu risus in ex posuere egestas a id tellus. Nulla imperdiet nec nibh sed maximus. Proin imperdiet nulla in libero mollis varius. Pellentesque eget ex fringilla leo egestas porta sed ullamcorper ante. Suspendisse imperdiet eget metus vel scelerisque. Pellentesque tellus ante, dictum eu tempus sed, tempor et purus. Morbi id ligula eu diam faucibus ultrices sit amet at urna."
+                pageTitle="Hackathon Criticism"
+                url="https://en.wikipedia.org/wiki/Hackathon#Criticism"
+              />{" "}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              dapibus placerat feugiat. Vivamus eros tortor, sagittis a semper
+              in, blandit a magna. Suspendisse mollis, nulla et aliquam dictum,
+              urna eros gravida magna, eget molestie nunc quam sed augue. Nullam
+              at libero tempor, tincidunt augue ultrices, laoreet risus. Morbi
+              eu orci urna. Curabitur viverra efficitur libero, vel ornare
+              ligula placerat nec. Phasellus rutrum tincidunt pretium. Donec
+              turpis metus, bibendum eu elit vel, malesuada euismod dui.
+              Suspendisse eu risus in ex posuere egestas a id tellus. Nulla
+              imperdiet nec nibh sed maximus. Proin imperdiet nulla in libero
+              mollis varius. Pellentesque eget ex fringilla leo egestas porta
+              sed ullamcorper ante. Suspendisse imperdiet eget metus vel
+              scelerisque. Pellentesque tellus ante, dictum eu tempus sed,
+              tempor et purus. Morbi id ligula eu diam faucibus ultrices sit
+              amet at urn
             </div>
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

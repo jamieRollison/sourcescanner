@@ -3,7 +3,6 @@ import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
 
 export default function Edit() {
-
   return (
     <>
       <Head>
@@ -17,7 +16,7 @@ export default function Edit() {
           Get started with Source Scanner.
         </h1>
         <div className="h-[60vh]">
-          <div className="mx-10 flex gap-8 xs:flex-wrap sm:flex-grow">
+          <div className="xs:flex-wrap mx-10 flex gap-8 sm:flex-grow">
             <div className="flex w-1/2 flex-col">
               <form className="">
                 <textarea
@@ -38,7 +37,6 @@ export default function Edit() {
             </div>
           </div>
         </div>
-
       </main>
     </>
   );

@@ -21,14 +21,15 @@
     "@trpc/server": "^10.34.0",
     "api": "^6.1.1",
     "axios": "^1.5.0",
-    "metaphor-node": "^1.0.20",
     "flowbite-react": "^0.6.0",
+    "metaphor-node": "^1.0.20",
     "next": "^13.4.13",
     "next-auth": "^4.22.4",
     "node-fetch": "^3.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "superjson": "^1.13.1",
+    "tw-elements": "^1.0.0-rc.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {
