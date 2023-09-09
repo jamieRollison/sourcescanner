@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        JetBrains: ['JetBrains Mono', 'monospace'],
+        mono: ['var(--font-roboto-mono)'],
       },
     },
     colors: {

@@ -43,7 +43,7 @@ export default function Home() {
             <div className="text-sm lg:flex-grow">
               <a
                 href="#responsive-header"
-                className="font-JetBrains mt-4 block text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
+                className="font-mono mt-4 block text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
               >
                 About
               </a>
