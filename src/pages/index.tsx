@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
 
@@ -48,9 +49,12 @@ export default function Home() {
                 We are students too, and we know how hard it can be to fully
                 <br /> understand academic papers and reading materials 📚📝
               </p>
-              <button className="mt-10 w-40 rounded-md border-2 border-white bg-transparent p-4 hover:bg-primary">
+              <Link
+                href={"/edit"}
+                className="mt-10 w-40 rounded-md border-2 border-white bg-transparent p-4 hover:bg-primary"
+              >
                 Try it Now
-              </button>
+              </Link>
             </div>
             <div className="flex w-1/2 flex-col gap-10">
               <div className="mx-10 rounded-md border-4 border-primary bg-[#F2DDC9] p-4 font-semibold hover:border-white">
