@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="mt-20 text-center text-6xl font-bold text-white">
             Scan your text,
             <br />{" "}
-            <span className="text-[#EC6A32] underline decoration-dashed">
+            <span className="text-primary_dark underline decoration-dashed">
               understand
             </span>{" "}
             the words.✨
