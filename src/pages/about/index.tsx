@@ -15,7 +15,7 @@ export default function About() {
       <main className="flex min-h-screen flex-col bg-dark text-white">
         <Navbar />
         <section className="flex flex-1 flex-col items-center">
-          <p className=" relative mt-20 w-[max-content] text-center text-5xl text-sky-400 before:absolute before:inset-0 before:animate-typewriter before:bg-dark">
+          <p className="relative mt-20 w-[max-content] text-center text-5xl text-sky-400 before:absolute before:inset-0 before:animate-typewriter before:bg-dark">
             The Team ⚡️
           </p>
           <p></p>
