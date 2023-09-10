@@ -9,10 +9,23 @@ export default function Navbar() {
         <Image className="mr-6" alt="" src={UIUC} width={30} height={30} />
 
         <p className="text-white">
-          Made with ♡ by <span className="underline">Jamie</span>,{" "}
-          <span className="underline">Cole</span>,{" "}
-          <span className="underline">Ellie</span>, and{" "}
-          <span className="underline">Owen</span> @ Pennapps, 2023
+          Made with ♡ by{" "}
+          <a href="https://github.com/jamieRollison " className="underline">
+            Jamie
+          </a>
+          ,{" "}
+          <a href="https://github.com/ca-zimmerman" className="underline">
+            Cole
+          </a>
+          ,{" "}
+          <a href="https://github.com/exrlla" className="underline">
+            Ellie
+          </a>
+          , and{" "}
+          <a href="https://github.com/opcushing" className="underline">
+            Owen
+          </a>{" "}
+          @ Pennapps, 2023
         </p>
       </div>
     </footer>

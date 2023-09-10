@@ -16,14 +16,16 @@ export default function Home() {
       <main className="flex min-h-screen flex-col bg-dark">
         <Navbar />
         <section className="flex flex-1 flex-col ">
-          <h1 className="mt-20 text-center text-6xl font-bold text-white">
+          <div className="flex justify-center ">
+          <h1 className="mt-20 text-center text-6xl font-bold text-white leading-relaxed">
             Scan your text,
             <br />{" "}
-            <span className="text-primary_dark underline decoration-dashed">
+            <span className="text-primary_dark underline decoration-dashed relative w-[max-content] before:absolute before:inset-0 before:animate-typewriter before:bg-dark before:h-20">
               understand
             </span>{" "}
             the words.✨
           </h1>
+          </div>
           <div className="mx-10 flex gap-6 lg:mx-60 xl:mx-80">
             <div className="mt-10 w-1/2 rounded-md border-2 border-white bg-secondary ">
               <p className="p-4 text-white">
