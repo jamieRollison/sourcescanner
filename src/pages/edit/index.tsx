@@ -41,7 +41,6 @@ export default function Edit() {
                   </button>
                 </div>
               </div>
-
               <div className=" h-[60vh] w-1/2 rounded-lg bg-white px-10 pt-6">
                 <p className="overflow-auto">text</p>
               </div>

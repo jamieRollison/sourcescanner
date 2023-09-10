@@ -6,7 +6,7 @@ export default function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <nav className="bg-secondary flex flex-wrap items-center justify-between bg-teal-500 p-6">
+    <nav className="bg-secondary flex flex-wrap items-center justify-between p-6">
       <div className="mr-6 flex flex-shrink-0 items-center text-white">
         <Link href="/">
           <Image
@@ -18,7 +18,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="block lg:hidden">
-        <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
+        <button className="flex items-center rounded border px-3 py-2 hover:border-white hover:text-white">
           <svg
             className="h-3 w-3 fill-current"
             viewBox="0 0 20 20"

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "~/components/navbar";
+import Footer from "~/components/footer";
 
 export default function About() {
   return (
@@ -11,26 +12,29 @@ export default function About() {
       </Head>
 
       <main className="flex min-h-screen flex-col bg-dark text-white">
-        <Navbar></Navbar>
-        <div className="m-6 flex flex-col items-start">
-          <h1 className="text-2xl text-sky-400">The Product</h1>
-          <p></p>
+        <Navbar />
+        <section className="flex flex-1 flex-col ">
+          <div className="m-6 flex flex-col items-start">
+            <h1 className="text-2xl text-sky-400">The Product</h1>
+            <p></p>
 
-          <h1 className="text-2xl text-sky-400">The Team</h1>
-          <h3 className="text-xl text-sky-600">Jamie</h3>
-          <p className="text-lg">Jamie is cool</p>
+            <h1 className="text-2xl text-sky-400">The Team</h1>
+            <h3 className="text-xl text-sky-600">Jamie</h3>
+            <p className="text-lg">Jamie is cool</p>
 
-          <h3 className="text-xl text-sky-600">Ellie</h3>
-          <p className="text-lg">Ellie is cool</p>
+            <h3 className="text-xl text-sky-600">Ellie</h3>
+            <p className="text-lg">Ellie is cool</p>
 
-          <h3 className="text-xl text-sky-600">Cole</h3>
-          <p className="text-lg">Cole is cool</p>
+            <h3 className="text-xl text-sky-600">Cole</h3>
+            <p className="text-lg">Cole is cool</p>
 
-          <h3 className="text-xl text-sky-600">Owen</h3>
-          <p className="text-lg">Owen is cool</p>
-          <p></p>
-          <h1 className="text-2xl text-sky-400">The Sources</h1>
-        </div>
+            <h3 className="text-xl text-sky-600">Owen</h3>
+            <p className="text-lg">Owen is cool</p>
+            <p></p>
+            <h1 className="text-2xl text-sky-400">The Sources</h1>
+          </div>
+        </section>
+        <Footer />
       </main>
     </>
   );
