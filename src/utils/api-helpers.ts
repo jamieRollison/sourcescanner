@@ -1,5 +1,7 @@
 import type { DictionaryEntry } from "./types";
 import type { OpenAI } from "openai";
+import { env } from "~/env.mjs";
+import sdk from "@api/metaphorapi";
 
 export const parseGPTResponse = (
   response: OpenAI.Chat.Completions.ChatCompletion,
@@ -11,7 +13,23 @@ export const parseGPTResponse = (
   const listString = code?.slice(code.indexOf("["), code.indexOf("`")) ?? "";
   const list = JSON.parse(listString) as DictionaryEntry[];
 
-  console.log(list);
+  return list;
+};
 
-  return [];
+export const searchMetaphorAPI = async (query: string) => {
+  sdk.auth(env.METAPHOR_SECRET);
+  return sdk
+    .search({
+      query,
+      numResults: 1,
+      useAutoprompt: true,
+      type: "neural",
+    })
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err: Error) => {
+      console.error(err);
+      throw err;
+    });
 };

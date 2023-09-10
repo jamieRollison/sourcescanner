@@ -1,6 +1,5 @@
-import { exampleRouter } from "~/server/api/routers/example";
 import { createTRPCRouter } from "~/server/api/trpc";
-import { metaphorRouter } from "./routers/metaphor";
+import { router } from "./routers/router";
 
 /**
  * This is the primary router for your server.
@@ -8,8 +7,7 @@ import { metaphorRouter } from "./routers/metaphor";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  example: exampleRouter,
-  metaphor: metaphorRouter,
+  router: router,
 });
 
 // export type definition of API
