@@ -5,10 +5,12 @@ import { signIn, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { api } from "~/utils/api";
 import type { Annotation } from "~/utils/types";
+import ScannedText from "~/components/scannedtext";
 
 export default function Edit() {
   const { status } = useSession();
   const annotate = api.router.annotate.useMutation();
+  const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
     if (status == "unauthenticated") {
@@ -21,6 +23,7 @@ export default function Edit() {
 
   useEffect(() => {
     console.log(annotations);
+    setScanned(annotations.length != 0);
   }, [annotations]);
 
   return (
@@ -56,7 +59,6 @@ export default function Edit() {
                           .mutateAsync(text)
                           .then((res) => {
                             setAnnotations(res);
-                            setAnnotations(annotations);
                           })
                           .catch((err) => {
                             console.log(err);
@@ -67,9 +69,11 @@ export default function Edit() {
                     </button>
                   </div>
                 </div>
-                <div className=" h-[60vh] w-1/2 rounded-lg bg-white px-10 pt-6">
-                  <p className="overflow-auto">text</p>
-                </div>
+                <p className="h-[60vh] w-1/2 overflow-y-auto overflow-x-clip rounded-lg border-2 border-primary bg-white p-6">
+                  {scanned && (
+                    <ScannedText annotations={annotations} source_text={text} />
+                  )}
+                </p>
               </div>
             </div>
           </section>
