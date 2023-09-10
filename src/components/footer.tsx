@@ -28,14 +28,6 @@ export default function Navbar() {
           @ Pennapps, 2023
         </p>
       </div>
-      <a href="https://github.com/jamieRollison/sourcescanner">
-        <Image
-          src="/github-mark-white.png"
-          width="30"
-          height="30"
-          alt="Github"
-        ></Image>
-      </a>
     </footer>
   );
 }
