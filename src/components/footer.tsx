@@ -15,14 +15,24 @@ export default function Navbar() {
           <span className="underline">Owen</span> @ Pennapps, 2023
         </p>
       </div>
-      <a href="https://github.com/jamieRollison/sourcescanner">
-        <Image
-          src="/github-mark-white.png"
-          width="30"
-          height="30"
-          alt="Github"
-        ></Image>
-      </a>
+      <div className="align-center flex justify-between space-x-5">
+        <a href="https://devpost.com/software/sourcescanner">
+          <Image
+            src="/devpost-logo.png"
+            width="35"
+            height="35"
+            alt="devpost"
+          ></Image>
+        </a>
+        <a href="https://github.com/jamieRollison/sourcescanner">
+          <Image
+            src="/github-mark-white.png"
+            width="30"
+            height="30"
+            alt="Github"
+          ></Image>
+        </a>
+      </div>
     </footer>
   );
 }
