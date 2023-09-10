@@ -35,20 +35,31 @@ export const router = createTRPCRouter({
       });
       const dictionary = parseGPTResponse(response);
       const search = dictionary.map(async (entry: DictionaryEntry) => {
-        const { results: response } = await searchMetaphorAPI(entry.word);
+        const { results: response } = await searchMetaphorAPI(
+          "Here is an article about" +
+            entry.word +
+            ", which is " +
+            entry.definition,
+        );
         if (!response) throw new Error("No response from Metaphor API");
 
         const result = response[0];
         if (!result) throw new Error("No search results");
 
-        const { title: article, url } = result;
-        if (!article || !url) throw new Error("No article or url");
+        const { title: article, url, score } = result;
+        if (!article || !url || !score)
+          throw new Error("Not enough information from Metaphor API");
+
+        console.log({ article, url, ...entry, score });
+
         return {
           ...entry,
           article,
           url,
+          score,
         };
       });
-      return Promise.all(search);
+
+      return (await Promise.all(search)).filter(({ score }) => score > 0.1);
     }),
 });

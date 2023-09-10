@@ -25,6 +25,7 @@ export const searchMetaphorAPI = async (query: string) => {
       numResults: 1,
       useAutoprompt: true,
       type: "neural",
+      includeDomains: ["en.wikipedia.org"],
     })
     .then((res) => {
       return res.data;

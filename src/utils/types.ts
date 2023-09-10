@@ -6,4 +6,5 @@ export interface DictionaryEntry {
 export interface Annotation extends DictionaryEntry {
   url: string;
   article: string;
+  score: number;
 }

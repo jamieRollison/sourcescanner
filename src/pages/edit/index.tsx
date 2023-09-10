@@ -18,6 +18,10 @@ export default function Edit() {
   const [text, setText] = useState("");
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
 
+  useEffect(() => {
+    console.log(annotations);
+  }, [annotations]);
+
   return (
     status == "authenticated" && (
       <>
@@ -46,7 +50,6 @@ export default function Edit() {
                   <button
                     className="bg-primary mt-2 rounded-lg p-4 text-white "
                     onClick={() => {
-                      console.log(text);
                       annotate
                         .mutateAsync(text)
                         .then((res) => {
