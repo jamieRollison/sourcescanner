@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "~/components/navbar";
 import Footer from "~/components/footer";
 
-export default function Edit() {
+export default function Scan() {
   return (
     <>
       <Head>

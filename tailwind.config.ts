@@ -23,6 +23,7 @@ export default {
       gray: "#BFC0C0",
       white: "#FFFFFF",
       black: "#1E1E1E",
+      green: colors.green,
       sky: colors.sky,
       amber: colors.amber,
       transparent: colors.transparent,
