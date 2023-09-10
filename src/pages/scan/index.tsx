@@ -6,15 +6,17 @@ import { useEffect, useState } from "react";
 import { api } from "~/utils/api";
 import type { Annotation } from "~/utils/types";
 import ScannedText from "~/components/scannedtext";
+import SyncLoader from "react-spinners/SyncLoader";
 
-export default function Edit() {
+export default function Scan() {
   const { status } = useSession();
   const annotate = api.router.annotate.useMutation();
   const [scanned, setScanned] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (status == "unauthenticated") {
-      void signIn("google", { callbackUrl: "/edit" });
+      void signIn("google", { callbackUrl: "/scan" });
     }
   }, [status]);
 
@@ -55,10 +57,12 @@ export default function Edit() {
                     <button
                       className="mt-2 rounded-lg bg-primary p-4 text-white "
                       onClick={() => {
+                        setLoading(true);
                         annotate
                           .mutateAsync(text)
                           .then((res) => {
                             setAnnotations(res);
+                            setLoading(false);
                           })
                           .catch((err) => {
                             console.log(err);
@@ -69,11 +73,20 @@ export default function Edit() {
                     </button>
                   </div>
                 </div>
-                <p className="h-[60vh] w-1/2 overflow-y-auto overflow-x-clip rounded-lg border-2 border-primary bg-white p-6">
-                  {scanned && (
+                <div
+                  className={
+                    loading
+                      ? `flex items-center justify-center`
+                      : "" +
+                        `h-[60vh] w-1/2  overflow-y-auto overflow-x-clip rounded-lg border-2 border-primary bg-white p-6`
+                  }
+                >
+                  {scanned ? (
                     <ScannedText annotations={annotations} source_text={text} />
+                  ) : (
+                    loading && <SyncLoader color="rgb(225 136 94)" />
                   )}
-                </p>
+                </div>
               </div>
             </div>
           </section>

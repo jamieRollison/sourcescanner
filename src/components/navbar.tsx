@@ -38,10 +38,10 @@ export default function Navbar() {
             About
           </a>
           <a
-            href="edit"
+            href="scan"
             className="mt-4 block font-mono text-white transition duration-100 ease-in-out hover:text-primary lg:mt-0 lg:inline-block"
           >
-            Edit
+            Scan
           </a>
         </div>
         <div className="space-x-2">

@@ -12,7 +12,7 @@ type SourceProps = {
 export default function Source({ word, info, pageTitle, url }: SourceProps) {
   return (
     <span className="group relative inline-block max-h-0 max-w-sm">
-      <span className="bg-secondary_dark pointer-events-none absolute -left-2 bottom-0 w-96 rounded-lg border-2 border-primary p-2 text-white opacity-0 transition-opacity delay-75 group-hover:pointer-events-auto group-hover:opacity-100">
+      <span className="pointer-events-none absolute -left-2 top-0 z-50 w-96 rounded-lg border-2 border-primary bg-secondary_dark p-2 text-white opacity-0 transition-opacity delay-75 group-hover:pointer-events-auto group-hover:opacity-100">
         {reactStringReplace(info, word, (_match, index, _offset) => (
           <p className="inline-block font-bold text-primary" key={index}>
             {word}
