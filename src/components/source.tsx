@@ -1,15 +1,13 @@
 import reactStringReplace from "react-string-replace";
 
+import { BiLinkExternal } from "react-icons/bi";
+
 type SourceProps = {
   word: string;
   info: string;
   pageTitle: string;
   url: string;
 };
-
-// function bold(info: string, word: string): string {
-//   return info.replace(word, "<b>" + word + "</b>");
-// }
 
 export default function Source({ word, info, pageTitle, url }: SourceProps) {
   return (
@@ -23,8 +21,10 @@ export default function Source({ word, info, pageTitle, url }: SourceProps) {
         <a
           className="block text-xs text-sky-500 underline decoration-dashed"
           href={url}
+          target="_blank"
         >
           {pageTitle}
+          <BiLinkExternal className="ml-0.5 inline" />
         </a>
       </span>
       <p className="text-primary underline decoration-dashed">{word}</p>
