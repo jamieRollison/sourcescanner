@@ -26,7 +26,7 @@ export default function Home() {
             <span className="text-primary underline decoration-dashed">
               understand
             </span>{" "}
-            the words.
+            the words.✨
           </h1>
           <div className="mx-10 flex gap-6 lg:mx-60 xl:mx-80">
             <div className="mt-10 w-1/2 rounded-md border-2 border-white bg-secondary ">
@@ -44,10 +44,10 @@ export default function Home() {
                 url="https://en.wikipedia.org/wiki/Hackathon#Criticism"
               />{" "}
               is a great way to learn about ways you can manipulate code and
-              software in unique and interesting ways.
+              software in unique and interesting ways. 
             </div>
           </div>
-          <div className="mt-10 flex bg-primary_dark py-20 text-center font-semibold text-white">
+          <div className="mt-16 flex bg-primary_dark py-20 text-center font-semibold text-white">
             <div className="flex w-1/2 flex-col items-center">
               <p className="text-3xl mx-10">
                 We are students too, and we know how hard it can be to 
@@ -58,11 +58,18 @@ export default function Home() {
               </button>
             </div>
             <div className="w-1/2 flex flex-col gap-10">
-              <div className="bg-[#f5f5f5] mx-10 rounded-md p-4 font-semibold border-4 border-primary">
-                <p className="text-black h-20">Wikipedia Lens</p>
+              <div className="bg-[#F2DDC9] mx-10 rounded-md p-4 font-semibold border-4 border-primary hover:border-white">
+                <p className="text-sky-700 text-xl">Wikipedia Lens 🔎</p>
+                <p className="text-black mx-10">
+                  The Wikipedia lens offers you the ability to provide you with wikipedia links and articles
+                  that are relevant to the text you are reading!
+                </p>
               </div>
-              <div className="bg-[#f5f5f5] mx-10 rounded-md p-4 font-semibold border-4 border-primary">
-                <p className="text-black h-20">Technical Lens</p>
+              <div className="bg-[#F2DDC9] mx-10 rounded-md p-4 font-semibold border-4 border-primary hover:border-white">
+                <p className="text-green-700 text-xl ">Technical Lens 👩🏻‍🔬</p>
+                <p className="text-black mx-10">The Technical lens provides you to websites and links that are catered towards
+                the technical side, perfect for science and engineering students!
+                </p>
               </div>
             </div>
           </div>

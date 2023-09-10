@@ -25,6 +25,7 @@ export default {
       white: "#FFFFFF",
       black: "#1E1E1E",
       sky: colors.sky,
+      amber: colors.amber,
       transparent: colors.transparent,
     },
   },

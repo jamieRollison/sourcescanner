@@ -1,14 +1,19 @@
 import Image from "next/image";
+import UIUC from "../../public/uiuc_logo.png";
 
 export default function Navbar() {
   return (
     <footer className="fixed bottom-0 left-0 flex w-full flex-wrap items-center justify-between bg-secondary p-4">
-      <p className="text-white">Made by Jamie, Ellie, Cole, and Owen</p>
+      <div className="flex items-center">
+      <Image className="mr-6"alt="" src={UIUC} width={30} height={30} />
+     
+      <p className="text-white">Made with ♡ by <span className="underline">Jamie</span>, <span className="underline">Cole</span>, <span className="underline">Ellie</span>, and <span className="underline">Owen</span> @ Pennapps, 2023</p>
+      </div>
       <a href="https://github.com/jamieRollison/sourcescanner">
         <Image
           src="/github-mark-white.png"
-          width="50"
-          height="50"
+          width="30"
+          height="30"
           alt="Github"
         ></Image>
       </a>
