@@ -13,6 +13,16 @@ export default {
       fontFamily: {
         mono: ["var(--font-roboto-mono)"],
       },
+      animation: {
+        typewriter: "typewriter 2s steps(60) forwards",
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%",
+          },
+        },
+      },
     },
     colors: {
       dark: "#2E3141",

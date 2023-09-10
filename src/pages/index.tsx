@@ -39,7 +39,7 @@ export default function Home() {
                 url="https://en.wikipedia.org/wiki/Hackathon"
               />{" "}
               is a great way to learn about ways you can manipulate code and
-              software in unique and interesting ways. 
+              software in unique and interesting ways.
             </div>
           </div>
           <div className="mt-16 flex bg-primary_dark py-20 text-center font-semibold text-white">
@@ -52,18 +52,21 @@ export default function Home() {
                 Try it Now
               </button>
             </div>
-            <div className="w-1/2 flex flex-col gap-10">
-              <div className="bg-[#F2DDC9] mx-10 rounded-md p-4 font-semibold border-4 border-primary hover:border-white">
-                <p className="text-sky-700 text-xl">Wikipedia Lens 🔎</p>
-                <p className="text-black mx-10">
-                  The Wikipedia lens offers you the ability to provide you with wikipedia links and articles
-                  that are relevant to the text you are reading!
+            <div className="flex w-1/2 flex-col gap-10">
+              <div className="mx-10 rounded-md border-4 border-primary bg-[#F2DDC9] p-4 font-semibold hover:border-white">
+                <p className="text-xl text-sky-700">Wikipedia Lens 🔎</p>
+                <p className="mx-10 text-black">
+                  The Wikipedia lens offers you the ability to provide you with
+                  wikipedia links and articles that are relevant to the text you
+                  are reading!
                 </p>
               </div>
-              <div className="bg-[#F2DDC9] mx-10 rounded-md p-4 font-semibold border-4 border-primary hover:border-white">
+              <div className="mx-10 rounded-md border-4 border-primary bg-[#F2DDC9] p-4 font-semibold hover:border-white">
                 <p className="text-green-700 text-xl ">Technical Lens 👩🏻‍🔬</p>
-                <p className="text-black mx-10">The Technical lens provides you to websites and links that are catered towards
-                the technical side, perfect for science and engineering students!
+                <p className="mx-10 text-black">
+                  The Technical lens provides you to websites and links that are
+                  catered towards the technical side, perfect for science and
+                  engineering students!
                 </p>
               </div>
             </div>

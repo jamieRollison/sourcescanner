@@ -2,6 +2,7 @@
   "name": "sourcescanner",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -30,6 +31,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-string-replace": "^1.1.1",
+    "react-ts-typewriter": "^0.1.8-b",
     "superjson": "^1.13.1",
     "tw-elements": "^1.0.0-rc.1",
     "zod": "^3.21.4"
