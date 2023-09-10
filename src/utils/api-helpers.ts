@@ -9,8 +9,9 @@ export const parseGPTResponse = (
   const text = response.choices[0]?.message.content;
   if (!text || response.choices[0]?.finish_reason != "stop") return [];
 
-  const code = text.split("```")[1];
-  const listString = code?.slice(code.indexOf("["), code.indexOf("`")) ?? "";
+  const listString =
+    text?.slice(text.indexOf("["), text.indexOf("]") + 1) ?? "";
+
   const list = JSON.parse(listString) as DictionaryEntry[];
 
   return list;
@@ -29,7 +30,6 @@ export const searchMetaphorAPI = async (query: string) => {
       return res.data;
     })
     .catch((err: Error) => {
-      console.error(err);
       throw err;
     });
 };

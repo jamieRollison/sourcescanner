@@ -6,7 +6,7 @@ import { parseGPTResponse, searchMetaphorAPI } from "~/utils/api-helpers";
 
 import { env } from "~/env.mjs";
 import type { ChatCompletionMessageParam } from "openai/resources/chat";
-import type { Annotation } from "~/utils/types";
+import type { Annotation, DictionaryEntry } from "~/utils/types";
 
 export const router = createTRPCRouter({
   annotate: publicProcedure
@@ -14,12 +14,11 @@ export const router = createTRPCRouter({
     .mutation(async ({ input }): Promise<Annotation[]> => {
       const openai = new OpenAI({ apiKey: env.GPT_KEY });
 
-      console.log("input", input);
       const messages: ChatCompletionMessageParam[] = [
         {
           role: "user",
-          content: `consider the following paragraph and make a list of objects in javascript that follow the schema 
-        {“name”: string, “definition”: string} without assigning it to a variable. in these objects, the 'name' is 
+          content: `consider the following paragraph and make a JSON list of objects that follow the schema 
+        {word: string, “definition”: string} without assigning it to a variable. in these objects, the 'word' is 
         a string with a word / concept / proper noun that may need to be defined, and the 'definition' is a string 
         with the first entry's definition. ignore words which are common or semantically neutral and if something 
         seems like a proper noun, include it.`,
@@ -34,9 +33,8 @@ export const router = createTRPCRouter({
         model: "gpt-3.5-turbo",
         messages: messages,
       });
-      console.log("response", response);
       const dictionary = parseGPTResponse(response);
-      const search = dictionary.map(async (entry) => {
+      const search = dictionary.map(async (entry: DictionaryEntry) => {
         const { results: response } = await searchMetaphorAPI(entry.word);
         if (!response) throw new Error("No response from Metaphor API");
 
