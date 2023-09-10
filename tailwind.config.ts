@@ -4,7 +4,6 @@ import colors from "tailwindcss/colors";
 
 export default {
   content: [
-    "./node_modules/flowbite-react/**/*.js",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -28,5 +27,5 @@ export default {
       transparent: colors.transparent,
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [],
 } satisfies Config;
